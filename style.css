@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    cursor: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0em;
+    padding: 0em;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+li {
+    background-color: rgba(105, 105, 105, 0.25);
+    border-radius: 10px;
+    margin: 1em 2em 0.25em 2em;
+    list-style-type: none;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-btn {
+    border-color: transparent;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: 1em 0em 1em 0em;
+    padding: 0px 20px;
+}
+
+.colored-logo-portion {
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 20px rgb(255, 255, 255), 0px 0px 40px rgb(255, 255, 255);
+}
+
+.complete-btn {
+    background-color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    margin-left: 1em;
+    margin-top: 0.3em;
+    padding: 0 20px;
+}
+
+.title-text {
+    font-weight: 700;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.trash-btn {
+    background-color: white;
+    border-color: transparent;
+    border-radius: 10px;
+    color: black;
+    font-weight: 600;
+    margin-right: 1em;
+    margin-top: 0.3em;
+    padding: 0 20px;
+}
+
+.user-input {
+    background-color: white;
+    border-color: transparent;
+    border-radius: 10px;
+}
+
+.wrapper {
+    background-color: rgb(22, 22, 22);
+    border-radius: 15px;
+    min-height: 200px;
+    margin: 1em auto;
+    outline: solid rgb(77, 77, 77) 2px;
+    text-align: center;
+    width: 350px;
+}
+
+/* stolen css, https://codepen.io/thebabydino/pen/rNPOpJK */
+@property --k {
+    syntax: '<number>';
+    initial-value: 0;
+    inherits: false;
+}
+
+h1 {
+    --k: 0;
+    /* place-self: center; */
+    background:
+        linear-gradient(90deg,
+            hsl(calc(var(--k)*1turn), 95%, 65%),
+            hsl(calc(var(--k)*1turn + 90deg), 95%, 65%)) text;
+    color: transparent;
+    font: 900 clamp(.875em, 7.25vw, 5em) sans-serif;
+    filter: url(#f);
+    /* text-align: center; */
+    text-transform: uppercase;
+    animation: k 4s linear infinite;
+}
+
+@keyframes k {
+    to {
+        --k: 1
+    }
+}
+
+/* chatGPT provided */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    /* Set width of the circle */
+    height: 10px;
+    /* Set height of the circle */
+    background-color: rgba(92, 92, 92, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.661);
+    /* Transparent circle */
+    border-radius: 50%;
+    /* Make it a circle */
+    pointer-events: none;
+    /* Prevent the cursor from interacting with elements */
+    z-index: 10000;
+}
+
+.user-input:focus, .todo-item:focus {
+    outline: none; /* Remove default outline */
+    border: 2px solid hsl(calc(var(--k)*1turn), 95%, 65%); /* Add a border */
+    border-radius: 10px; /* Adjust this value to change the roundness */
+    background-clip: padding-box;
+    animation: k 4s linear infinite;
+}
+
+@keyframes k {
+    to {
+        --k: 1;
+    }
+}
