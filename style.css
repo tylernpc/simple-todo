@@ -144,7 +144,11 @@ h1 {
     }
 }
 
-
+/* MOBILE STUFF BELOW */
 @media only screen and (max-device-width: 480px) {
-    * { cursor: none; }
+    * {
+        cursor: none;
+        user-zoom: fixed;
+        touch-action: none;
+    }
 }
