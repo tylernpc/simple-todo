@@ -151,4 +151,8 @@ h1 {
         user-zoom: fixed;
         touch-action: none;
     }
+
+    .custom-cursor {
+        display: none;
+    }
 }
