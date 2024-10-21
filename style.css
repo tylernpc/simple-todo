@@ -143,3 +143,8 @@ h1 {
         --k: 1;
     }
 }
+
+
+@media only screen and (max-device-width: 480px) {
+    * { cursor: none; }
+}
